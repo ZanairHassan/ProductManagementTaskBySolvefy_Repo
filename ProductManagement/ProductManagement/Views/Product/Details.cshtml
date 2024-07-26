@@ -1,0 +1,18 @@
+﻿@model DAL.Models.Product
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="card">
+    <div class="card-header">
+        <h3>@Model.ProductName</h3>
+    </div>
+    <div class="card-body">
+        <p><strong>Description:</strong> @Model.ProductDescription</p>
+        <p><strong>Price:</strong> @Model.ProductPrice</p>
+        <p><strong>Type:</strong> @Model.ProductType</p>
+    </div>
+</div>
+<a class="btn btn-primary mt-3" href="@Url.Action("Index")">Back to List</a>

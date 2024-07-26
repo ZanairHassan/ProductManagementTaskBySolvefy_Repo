@@ -142,3 +142,5 @@ D:\Projects\ProductManagementTaskBySolvefy_Repo\ProductManagement\ProductManagem
 D:\Projects\ProductManagementTaskBySolvefy_Repo\ProductManagement\ProductManagement\obj\Debug\net8.0\ProductManagement.genruntimeconfig.cache
 D:\Projects\ProductManagementTaskBySolvefy_Repo\ProductManagement\ProductManagement\obj\Debug\net8.0\ref\ProductManagement.dll
 D:\Projects\ProductManagementTaskBySolvefy_Repo\ProductManagement\ProductManagement\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projects\ProductManagementTaskBySolvefy_Repo\ProductManagement\ProductManagement\bin\Debug\net8.0\AutoMapper.dll
+D:\Projects\ProductManagementTaskBySolvefy_Repo\ProductManagement\ProductManagement\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

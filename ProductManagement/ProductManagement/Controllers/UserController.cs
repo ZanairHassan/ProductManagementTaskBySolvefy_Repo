@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Utilities;
 
-namespace AuditApp.Controllers
+namespace ProductManagement.Controllers
 {
-    public class UserController : ControllerBase
+    public class UserController : Controller
     {
         private readonly TokenUtility _tokenUtility;
         private readonly AsymmetricCryptographyUtility _asymmetricCryptograpyUtility;
@@ -14,7 +14,6 @@ namespace AuditApp.Controllers
         private readonly IUserService _userService;
         private readonly IConfiguration _configuration;
         private readonly IServiceProvider _serviceProvider;
-        // private readonly  LoggingUtlity _logger;
 
         public UserController(TokenUtility tokenUtility,
             AsymmetricCryptographyUtility asymmetricCryptographyUtility,
@@ -23,7 +22,6 @@ namespace AuditApp.Controllers
             IUserService userService,
             IConfiguration configuration,
             IServiceProvider serviceProvider
-            //LoggingUtlity logger
             )
         {
             _tokenUtility = tokenUtility;
@@ -32,7 +30,19 @@ namespace AuditApp.Controllers
             _userService = userService;
             _configuration = configuration;
             _serviceProvider = serviceProvider;
-            //  _logger = logger;
+        }
+        [AllowAnonymous]
+        [HttpPost("Register")]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        [HttpPost("Login")]
+        public IActionResult Login()
+        {
+            return View();
         }
 
         // Other controller methods
@@ -68,7 +78,7 @@ namespace AuditApp.Controllers
                     TokenVM tokenVM = new TokenVM();
                     tokenVM.JwtToken = token;
                     var tkon = await _tokenService.CreateToken(tokenVM);
-                   
+
                     user.Email = Convert.ToBase64String(_asymmetricCryptograpyUtility.EncryptData(user.Email));
                     user.Password = Convert.ToBase64String(_asymmetricCryptograpyUtility.EncryptData(user.Password));
                     _userService.CreateUser(user);
@@ -162,7 +172,7 @@ namespace AuditApp.Controllers
         //        SMSTypeRequest.SendSMS(user.PhoneNo,temporyPassword);
 
         //        return Ok("THE password update request has successfully sent");
-                
+
         //    }
         //    catch (Exception ex)
         //    {
@@ -174,10 +184,10 @@ namespace AuditApp.Controllers
         [HttpGet("GetUser/{id}")]
         public async Task<IActionResult> GetTheUser(int id)
         {
-            var findUser=await _userService.GetUser(id);
-            if(findUser == null)
+            var findUser = await _userService.GetUser(id);
+            if (findUser == null)
             {
-                LoggingUtility.LogTxt("user didnot exist",_configuration);
+                LoggingUtility.LogTxt("user didnot exist", _configuration);
                 return NotFound();
             }
             try
@@ -187,7 +197,7 @@ namespace AuditApp.Controllers
             }
             catch (Exception ex)
             {
-                LoggingUtility.ExcLog(ex.Message,_serviceProvider);
+                LoggingUtility.ExcLog(ex.Message, _serviceProvider);
                 throw;
             }
         }
@@ -197,4 +207,5 @@ namespace AuditApp.Controllers
         }
         // Other controller methods
     }
+
 }
