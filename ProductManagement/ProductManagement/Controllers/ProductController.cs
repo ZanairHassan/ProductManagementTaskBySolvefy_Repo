@@ -11,7 +11,7 @@ public class ProductController : Controller
         _productService = productService;
     }
 
-    // GET: Product
+    // GET: Products
     public async Task<IActionResult> Index()
     {
         var products = await _productService.GetAllProduct();
@@ -48,28 +48,6 @@ public class ProductController : Controller
         return View(productVM);
     }
 
-    // GET: Product/Edit/5
-    // GET: Product/Edit/5
-    public async Task<IActionResult> Edit(int id)
-    {
-        var product = await _productService.GetProductById(id);
-        if (product == null)
-        {
-            return NotFound();
-        }
-
-        var productVM = new ProductVM
-        {
-            //ProductId = product.ProductId,
-            ProductName = product.ProductName,
-            ProductDescription = product.ProductDescription,
-            ProductPrice = product.ProductPrice,
-            ProductType = product.ProductType
-        };
-
-        return View(productVM);
-    }
-
     // POST: Product/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -86,10 +64,6 @@ public class ProductController : Controller
         }
         return View(productVM);
     }
-
-
-    // GET: Product/Delete/5
-    // GET: Product/Delete/5
     public async Task<IActionResult> Delete(int id)
     {
         var product = await _productService.GetProductById(id);

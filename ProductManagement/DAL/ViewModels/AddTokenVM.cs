@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DAL.ViewModels
 {
-    public class TokenVM
+    public class AddTokenVM
     {
         public string JwtToken { get; set; }
-        public int UserID { get; set; }
+        public int UserId { get; set; }
         public bool IsExpired { get; set; }
     }
 }

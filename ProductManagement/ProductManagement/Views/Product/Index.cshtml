@@ -34,3 +34,9 @@
     </tbody>
 </table>
 <a class="btn btn-primary" href="@Url.Action("Create")">Create New Product</a>
+<a class="btn btn-primary" href="@Url.Action("Register","User")">Create New User</a>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

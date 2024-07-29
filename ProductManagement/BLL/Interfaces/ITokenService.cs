@@ -5,12 +5,12 @@ namespace BLL.Interfaces
 {
     public interface ITokenService
     {
-        Task<Token> CreateToken(TokenVM tokenVM);
-        Task<Token> GetToken(int tokenID);
-        Task<Token> GetTokenByUserId(int UserID);
-        Task<List<Token>> GetAllToken();
-        Task<Token> UpdateToken(int tokenID, TokenVM tokenVM);
-        Task<Token> DeleteToken(int tokenID);
+        Task<AddToken> CreateToken(AddTokenVM tokenVM);
+        Task<AddToken> GetToken(int tokenID);
+        Task<AddToken> GetTokenByUserId(int UserID);
+        Task<List<AddToken>> GetAllToken();
+        Task<AddToken> UpdateToken(int tokenID, AddTokenVM tokenVM);
+        Task<AddToken> DeleteToken(int tokenID);
        // Task<Token> ValidateToken(string jwtToken);
 
     }

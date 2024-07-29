@@ -16,20 +16,17 @@ builder.Services.AddAuthentication(option =>
 }).AddJwtBearer(jwtoption =>
 {
     var key = builder.Configuration.GetValue<string>("Jwt:SecretKey");
-    var KeyIntoBytes=Encoding.UTF8.GetBytes(key);
-    jwtoption.SaveToken=true;
+    var KeyIntoBytes = Encoding.UTF8.GetBytes(key);
+    jwtoption.SaveToken = true;
     jwtoption.TokenValidationParameters = new TokenValidationParameters
     {
         IssuerSigningKey = new SymmetricSecurityKey(KeyIntoBytes),
         ValidateLifetime = true,
         ValidateAudience = true,
-        ValidateIssuer=true
-
+        ValidateIssuer = true
     };
 });
 
-
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("SolvefyConnectionString"), x => x.MigrationsAssembly("ProductManagement")));
@@ -41,11 +38,9 @@ builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -58,6 +53,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=User}/{action=Register}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

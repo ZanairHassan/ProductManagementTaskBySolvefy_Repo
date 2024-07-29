@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProductManagement.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <header>
@@ -55,11 +55,9 @@
                     url: form.attr("action"),
                     data: form.serialize(),
                     success: function (response) {
-                        // Handle success (e.g., redirect to index or show a success message)
                         window.location.href = form.data("success-redirect");
                     },
                     error: function (response) {
-                        // Handle error
                         alert("An error occurred while processing the form.");
                     }
                 });

@@ -19,61 +19,61 @@ namespace BLL.Services
             _context = context;
         }
 
-        public async Task<Token> CreateToken(TokenVM tokenVM)
+        public async Task<AddToken> CreateToken(AddTokenVM tokenVM)
         {
-            Token token = new Token();
+            AddToken token = new AddToken();
             token.CreatedDate = DateTime.Now;
             token.JwtToken = tokenVM.JwtToken;
-            token.UserID = tokenVM.UserID;
+            token.UserId = tokenVM.UserId;
             token.IsDeleted=false;
             token.IsExpired=false;
-            await _context.Tokens.AddAsync(token);
+            await _context.AddTokens.AddAsync(token);
             await _context.SaveChangesAsync();
             return token;
         }
 
-        public async Task<Token> DeleteToken(int tokenID)
+        public async Task<AddToken> DeleteToken(int tokenID)
         {
-            var token = await _context.Tokens.FirstOrDefaultAsync(x => x.TokenID == tokenID);
+            var token = await _context.AddTokens.FirstOrDefaultAsync(x => x.TokenID == tokenID);
             if (token == null)
             {
                 return null;
             }
             token.IsDeleted = true;
-            _context.Tokens.Remove(token);
+            _context.AddTokens.Remove(token);
             await _context.SaveChangesAsync();
             return token;
         }
 
-        public async Task<List<Token>> GetAllToken()
+        public async Task<List<AddToken>> GetAllToken()
         {
-            return await _context.Tokens.ToListAsync();
+            return await _context.AddTokens.ToListAsync();
         }
 
-        public async Task<Token> GetToken(int tokenID)
+        public async Task<AddToken> GetToken(int tokenID)
         {
-            return await _context.Tokens.FirstOrDefaultAsync(x => x.TokenID == tokenID);
+            return await _context.AddTokens.FirstOrDefaultAsync(x => x.TokenID == tokenID);
         }
-        public async Task<Token> GetTokenByUserId(int UserId)
+        public async Task<AddToken> GetTokenByUserId(int UserId)
         {
-            return await _context.Tokens.FirstOrDefaultAsync(x => x.UserID == UserId);
+            return await _context.AddTokens.FirstOrDefaultAsync(x => x.UserId == UserId);
         }
 
-        public async Task<Token> UpdateToken(int tokenID, TokenVM tokenVM)
+        public async Task<AddToken> UpdateToken(int tokenID, AddTokenVM tokenVM)
         {
-            var token = await _context.Tokens.FirstOrDefaultAsync(x => x.TokenID == tokenID);
+            var token = await _context.AddTokens.FirstOrDefaultAsync(x => x.TokenID == tokenID);
             if (token != null)
             {
                 token.JwtToken = tokenVM.JwtToken;
-                _context.Tokens.Update(token);
+                _context.AddTokens.Update(token);
                 await _context.SaveChangesAsync();
             }
 
             return token;
         }
-        public async Task<Token> ValidateToken(string jwtToken)
+        public async Task<AddToken> ValidateToken(string jwtToken)
         {
-            var token = await _context.Tokens.FirstOrDefaultAsync(x => x.JwtToken == jwtToken);
+            var token = await _context.AddTokens.FirstOrDefaultAsync(x => x.JwtToken == jwtToken);
             if (token == null || token.IsDeleted || token.IsExpired)
             {
                 return null;

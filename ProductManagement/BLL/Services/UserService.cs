@@ -19,12 +19,15 @@ namespace BLL.Services
 
         public async Task<User> CreateUser(UserVM userVM)
         {
-            User user = new User();
-            user.UserName = userVM.UserName;
-            user.Password = userVM.Password;
-            user.Email = userVM.Email;
-            user.FirstName = userVM.FirstName;
-            user.LastName = userVM.LastName;
+            var user = new User
+            {
+                UserName = userVM.UserName,
+                Password = userVM.Password,
+                Email = userVM.Email,
+                FirstName = userVM.FirstName,
+                LastName = userVM.LastName
+            };
+
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
             return user;
