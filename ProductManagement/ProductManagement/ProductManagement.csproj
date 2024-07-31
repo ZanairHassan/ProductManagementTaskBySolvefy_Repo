@@ -44,7 +44,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\User\Edit.cshtml" />
+    <None Include="Views\Admin\Edit.cshtml" />
   </ItemGroup>
 
 </Project>

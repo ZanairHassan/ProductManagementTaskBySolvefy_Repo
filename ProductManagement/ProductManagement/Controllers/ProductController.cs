@@ -12,11 +12,17 @@ public class ProductController : Controller
     }
 
     // GET: Products
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string searchString)
     {
-        var products = await _productService.GetAllProduct();
+        ViewData["CurrentFilter"] = searchString;
+
+        var products = String.IsNullOrEmpty(searchString)
+            ? await _productService.GetAllProduct()
+            : await _productService.SearchProducts(searchString);
+
         return View(products);
     }
+
 
     // GET: Product/Details/5
     public async Task<IActionResult> Details(int id)

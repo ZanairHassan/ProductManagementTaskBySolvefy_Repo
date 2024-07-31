@@ -58,6 +58,17 @@ namespace BLL.Services
             return await _context.Products.FirstOrDefaultAsync(x=> x.ProductId==id);
         }
 
+        public async Task<List<Product>> SearchProducts(string searchString)
+        {
+            var products = await _context.Products
+                .Where(p => !p.IsDeleted && p.ProductType.ToLower().Contains(searchString.ToLower()))
+                .ToListAsync();
+
+            return products;
+        }
+
+
+
         public async Task<Product> UpdateProduct(int id, ProductVM productVM) 
         {
             var product= await _context.Products.FirstOrDefaultAsync(x=>x.ProductId==id);

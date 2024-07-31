@@ -1,6 +1,7 @@
 using BLL.Interfaces;
 using BLL.Services;
 using DAL.DBContext;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -27,6 +28,7 @@ builder.Services.AddAuthentication(option =>
     };
 });
 
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("SolvefyConnectionString"), x => x.MigrationsAssembly("ProductManagement")));
@@ -35,7 +37,6 @@ builder.Services.AddSingleton<TokenUtility>();
 builder.Services.AddTransient<AsymmetricCryptographyUtility>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IUserService, UserService>();
-
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

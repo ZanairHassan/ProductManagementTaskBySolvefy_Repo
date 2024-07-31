@@ -1,2 +1,14 @@
 Date:  2024/07/29 05:00:59||||| User registered successfully
 Date:  2024/07/29 06:23:47||||| User registered successfully
+Date:  2024/07/31 02:47:16||||| RegisterUser action started
+Date:  2024/07/31 02:47:18||||| Model state is invalid
+Date:  2024/07/31 02:50:11||||| RegisterUser action started
+Date:  2024/07/31 02:51:18||||| Model state is invalid
+Date:  2024/07/31 02:53:20||||| RegisterUser action started
+Date:  2024/07/31 02:53:28||||| Model state is invalid
+Date:  2024/07/31 02:57:53||||| RegisterUser action started
+Date:  2024/07/31 02:58:26||||| User data encrypted
+Date:  2024/07/31 02:58:33||||| User registered successfully
+Date:  2024/07/31 04:04:10||||| The User has successfully registered....
+Date:  2024/07/31 05:16:00||||| User logged in successfully
+Date:  2024/07/31 05:27:15||||| The User has successfully registered....

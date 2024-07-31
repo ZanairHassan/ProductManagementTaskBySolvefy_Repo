@@ -25,7 +25,8 @@ namespace BLL.Services
                 Password = userVM.Password,
                 Email = userVM.Email,
                 FirstName = userVM.FirstName,
-                LastName = userVM.LastName
+                LastName = userVM.LastName,
+                UserType = userVM.UserType
             };
 
             await _context.Users.AddAsync(user);

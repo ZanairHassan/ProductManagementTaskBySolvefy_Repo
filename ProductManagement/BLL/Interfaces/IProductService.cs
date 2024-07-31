@@ -15,5 +15,6 @@ namespace BLL.Interfaces
         Task<List<Product>> GetAllProduct();
         Task<Product> DeleteProduct(int id);
         Task<Product> UpdateProduct(int id, ProductVM productVM);
+        Task<List<Product>> SearchProducts(string searchString);
     }
 }

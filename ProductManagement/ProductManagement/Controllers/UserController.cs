@@ -45,6 +45,12 @@ public class UserController : Controller
     {
         try
         {
+            LoggingUtility.LogTxt("RegisterUser action started", _configuration);
+            if (!ModelState.IsValid)
+            {
+                LoggingUtility.LogTxt("Model state is invalid", _configuration);
+                return View("Register", user);
+            }
             if (user == null || string.IsNullOrEmpty(user.UserName) || string.IsNullOrEmpty(user.Email))
             {
                 LoggingUtility.LogTxt("User data is null or username/email is null", _configuration);
@@ -67,11 +73,11 @@ public class UserController : Controller
 
             user.Email = Convert.ToBase64String(_asymmetricCryptograpyUtility.EncryptData(user.Email));
             user.Password = Convert.ToBase64String(_asymmetricCryptograpyUtility.EncryptData(user.Password));
-
+            LoggingUtility.LogTxt("User data encrypted", _configuration);
             var newUser = await _userService.CreateUser(user);
 
             LoggingUtility.LogTxt("User registered successfully", _configuration);
-            return RedirectToAction("Index"); // Redirect to the index page after successful registration
+            return RedirectToAction("Index"); 
         }
         catch (Exception ex)
         {

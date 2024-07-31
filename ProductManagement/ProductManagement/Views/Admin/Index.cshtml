@@ -40,8 +40,8 @@ else
     <p>No users found.</p>
 }
 
-<a class="btn btn-primary" mt-3 href="@Url.Action("Register","User")">Create New User</a>
-<a class="btn btn-primary" mt-3 href="@Url.Action("Index","Product")">Back to List</a>
+<a class="btn btn-primary" mt-3 href="@Url.Action("Register")">Create New User</a>
+<a class="btn btn-primary" mt-3 href="@Url.Action("Index","Product")">Product Page</a>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
