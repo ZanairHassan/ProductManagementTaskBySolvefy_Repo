@@ -72,18 +72,17 @@ namespace BLL.Services
         public async Task<Product> UpdateProduct(int id, ProductVM productVM) 
         {
             var product= await _context.Products.FirstOrDefaultAsync(x=>x.ProductId==id);
-            if (product == null)
+            if (product != null)
             {
-                return null ;
-            }
-            product.ProductName = productVM.ProductName;
-            product.ProductDescription = productVM.ProductDescription;
-            product.ProductPrice = productVM.ProductPrice;
-            product.ProductType = productVM.ProductType;
-            product.ProductModifiedDate= DateTime.Now;
+                product.ProductName = productVM.ProductName;
+                product.ProductDescription = productVM.ProductDescription;
+                product.ProductPrice = productVM.ProductPrice;
+                product.ProductType = productVM.ProductType;
+                product.ProductModifiedDate = DateTime.Now;
 
-            _context.Products.Update(product);
-            await _context.SaveChangesAsync();
+                _context.Products.Update(product);
+                await _context.SaveChangesAsync();
+            }
             return product;
         }
     }

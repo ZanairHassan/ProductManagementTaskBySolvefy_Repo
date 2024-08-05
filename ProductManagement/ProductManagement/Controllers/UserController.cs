@@ -29,8 +29,16 @@ public class UserController : Controller
     }
     public async Task<IActionResult> Index()
     {
-        var users = await _userService.GetAllUser();
-        return View(users);
+        try
+        {
+            var users = await _userService.GetAllUser();
+            return View(users);
+        }
+        catch (Exception ex)
+        {
+            LoggingUtility.ExcLog(ex.ToString(), _serviceProvider);
+            throw;
+        }
     }
 
     [HttpGet]
@@ -38,8 +46,6 @@ public class UserController : Controller
     {
         return View();
     }
-
-    //[HttpPost]
     [HttpPost]
     public async Task<IActionResult> RegisterUser(UserVM user)
     {
@@ -157,15 +163,23 @@ public class UserController : Controller
     [HttpPost]
     public async Task<IActionResult> Edit(int id, UserVM userVM)
     {
-        if (ModelState.IsValid)
+        try
         {
-            var editUser = await _userService.UpdateUser(id, userVM);
-            if (editUser == null)
+            if (ModelState.IsValid)
             {
-                return NotFound();
+                var editUser = await _userService.UpdateUser(id, userVM);
+                if (editUser == null)
+                {
+                    return NotFound();
+                }
+                return RedirectToAction(nameof(Index));
             }
-            return RedirectToAction(nameof(Index));
+            return View(userVM);
         }
-        return View(userVM);
+        catch (Exception ex)
+        {
+            LoggingUtility.ExcLog(ex.ToString(), _serviceProvider);
+            throw;
+        }
     }
 }

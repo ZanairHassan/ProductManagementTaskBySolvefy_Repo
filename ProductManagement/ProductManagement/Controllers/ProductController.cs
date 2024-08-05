@@ -53,7 +53,15 @@ public class ProductController : Controller
         }
         return View(productVM);
     }
-
+    public async Task<IActionResult> Edit(int id)
+    {
+        var product = await _productService.GetProductById(id);
+        if (product == null)
+        {
+            return NotFound();
+        }
+        return View();
+    }
     // POST: Product/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -70,6 +78,7 @@ public class ProductController : Controller
         }
         return View(productVM);
     }
+
     public async Task<IActionResult> Delete(int id)
     {
         var product = await _productService.GetProductById(id);

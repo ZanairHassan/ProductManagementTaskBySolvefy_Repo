@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|d:\\projects\\productmanagementtaskbysolvefy_repo\\productmanagement\\productmanagement\\views\\admin\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|solutionrelative:productmanagement\\views\\admin\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|d:\\projects\\productmanagementtaskbysolvefy_repo\\productmanagement\\productmanagement\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|solutionrelative:productmanagement\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|d:\\projects\\productmanagementtaskbysolvefy_repo\\productmanagement\\productmanagement\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|solutionrelative:productmanagement\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|d:\\projects\\productmanagementtaskbysolvefy_repo\\productmanagement\\productmanagement\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|solutionrelative:productmanagement\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|d:\\projects\\productmanagementtaskbysolvefy_repo\\productmanagement\\productmanagement\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|solutionrelative:productmanagement\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|d:\\projects\\productmanagementtaskbysolvefy_repo\\productmanagement\\productmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|solutionrelative:productmanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|d:\\projects\\productmanagementtaskbysolvefy_repo\\productmanagement\\productmanagement\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98810885-8084-44FA-8DD7-8FB743FEA516}|ProductManagement\\ProductManagement.csproj|solutionrelative:productmanagement\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DC3F591-1CBE-41DD-B25E-7E7A9AE68CFC}|BLL\\BLL.csproj|d:\\projects\\productmanagementtaskbysolvefy_repo\\productmanagement\\bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DC3F591-1CBE-41DD-B25E-7E7A9AE68CFC}|BLL\\BLL.csproj|solutionrelative:bll\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,15 +30,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 591,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "ProductManagement\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "ProductManagement\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAhwJQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T09:43:13.215Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -44,49 +53,63 @@
               "RelativeDocumentMoniker": "ProductManagement\\Controllers\\UserController.cs",
               "ToolTip": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Controllers\\UserController.cs",
               "RelativeToolTip": "ProductManagement\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAqwIYAAAAEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T11:58:56.533Z",
+              "WhenOpened": "2024-08-05T10:58:29.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Program.cs",
-              "RelativeDocumentMoniker": "ProductManagement\\Program.cs",
-              "ToolTip": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Program.cs",
-              "RelativeToolTip": "ProductManagement\\Program.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAhwCYAAAA4AAAA",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\BLL\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\UserService.cs",
+              "ToolTip": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\BLL\\Services\\UserService.cs",
+              "RelativeToolTip": "BLL\\Services\\UserService.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T12:12:35.127Z",
+              "WhenOpened": "2024-08-05T11:02:35.378Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Views\\User\\Register.cshtml",
-              "RelativeDocumentMoniker": "ProductManagement\\Views\\User\\Register.cshtml",
-              "ToolTip": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Views\\User\\Register.cshtml",
-              "RelativeToolTip": "ProductManagement\\Views\\User\\Register.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-31T12:19:01.414Z",
+              "Title": "TokenController.cs",
+              "DocumentMoniker": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Controllers\\TokenController.cs",
+              "RelativeDocumentMoniker": "ProductManagement\\Controllers\\TokenController.cs",
+              "ToolTip": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Controllers\\TokenController.cs",
+              "RelativeToolTip": "ProductManagement\\Controllers\\TokenController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAowBkAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T11:08:37.377Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Views\\Admin\\Register.cshtml",
-              "RelativeDocumentMoniker": "ProductManagement\\Views\\Admin\\Register.cshtml",
-              "ToolTip": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Views\\Admin\\Register.cshtml",
-              "RelativeToolTip": "ProductManagement\\Views\\Admin\\Register.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-31T12:21:49.325Z",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ProductManagement\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Projects\\ProductManagementTaskBySolvefy_Repo\\ProductManagement\\ProductManagement\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ProductManagement\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T11:09:45.541Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 591,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

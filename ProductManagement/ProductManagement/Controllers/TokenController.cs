@@ -23,7 +23,7 @@ namespace ProductManagement.Controllers
 
         [Route("CreateToken")]
         [HttpPost]
-        public async Task<IActionResult> CreateToken([FromBody] AddTokenVM tokenVM)
+        public async Task<IActionResult> CreateToken(AddTokenVM tokenVM)
         {
             try
             {
