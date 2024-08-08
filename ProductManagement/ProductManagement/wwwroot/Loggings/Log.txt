@@ -36,3 +36,7 @@ Date:  2024/08/05 03:30:12||||| Invalid password
 Date:  2024/08/05 03:30:16||||| Invalid password
 Date:  2024/08/05 03:30:25||||| User logged in successfully
 Date:  2024/08/05 03:37:28||||| User logged in successfully
+Date:  2024/08/08 01:46:38||||| The User has successfully registered....
+Date:  2024/08/08 01:54:20||||| User logged in successfully
+Date:  2024/08/08 02:13:41||||| The User has successfully registered....
+Date:  2024/08/08 02:14:40||||| User logged in successfully
